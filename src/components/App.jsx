@@ -39,14 +39,14 @@ export const App = () => {
     setContact(prevState => [...prevState, ContactId]);
   };
 
-  const changeFilter = newName => {
-    setFilter(newName);
-  };
-
   const handleDelete = contactsId => {
     setContact(prevState =>
       prevState.filter(contact => contact.id !== contactsId)
     );
+  };
+
+  const changeFilter = newName => {
+    setFilter(newName);
   };
 
   const filteredContacts = contacts.filter(contact =>
